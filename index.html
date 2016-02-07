@@ -53,36 +53,13 @@
     }
   </style>
   <script src='http://code.jquery.com/jquery-1.12.0.min.js'></script>
-  <script>
-  console.log('move');
-  function diff(x, y) {
-      var centerItem = $('body'),
-          centerLoc = centerItem.offset();
-      var dx = x - (centerLoc.left + (centerItem.width() / 2));
-          dy = y - (centerLoc.top + (centerItem.height() / 2));
-      return Math.atan2(dy, dx) * (180 / Math.PI);
-  }
-
-
-  $('body').mousemove(function(e){
-      var x = e.pageX;
-      var y = e.pageY;
-      console.log('move');
-      var myAngle = diff(x, y);
-      var rotationValue = 'rotate(' + myAngle + 'deg)';
-      $("#pointer").css({
-          '-moz-transform': rotationValue,
-          '-webkit-transform': rotationValue,
-          '-o-transform': rotationValue,
-          '-ms-transform': rotationValue,
-          'transform': rotationValue
-      });
-  });
-  </script>
+  <script src='monkey.js'></script>
 </head>
 
 <body>
   <img src='images/monkey.png'/>
   <img src='images/hongbao.png' id='pointer'/>
+  <img src='images/expression-default.png' id='face'/>
+  <img src='images/expression-frown.png' id='frown'/>
 </body>
 </html>
