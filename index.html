@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <title>Monkey</title>
+
+  <meta charset='utf-8'/>
+  <meta http-equiv='Content-Language' content='en'/>
+  <meta name='viewport' content='width=device-width, initial-scale=1'/>
+  <!-- <meta name='keywords' content='{{ site.keywords | join: ', ' }}{% if page.tags %}, {{ page.tags | join: ', ' }}{% endif %}'/>
+  <meta name='description' content='{% if page.excerpt %}{{ page.excerpt | strip_html | escape }}{% else %}{{ site.description }}{% endif %}'> -->
+
+  <!-- Open graph -->
+  <!-- <meta property='og:site_name' content='Wiredcraft'/>
+  <meta property='og:type' content='website'/>
+  <meta property='og:title' content='{{ title }}'/>
+  <meta property='og:url' content='{{ site.url }}{{ page.url }}'/>
+  <meta property='og:description' content='{{ description }}'/>
+  <meta property='og:image' content='{{ image }}'/> -->
+
+  <!-- Twitter card -->
+  <!-- <meta name='twitter:card' content='summary_large_image'/>
+  <meta name='twitter:site' content='@wiredcraft'/>
+  <meta name='twitter:creator' content='{{ creator }}'/>
+  <meta name='twitter:title' content='{{ title }}'/>
+  <meta name='twitter:description' content='{{ description }}'/>
+  <meta name='twitter:image' content='{{ image }}'/> -->
+
+  <!-- Favicons -->
+  <!-- {% include favicons.html %} -->
+
+  <!-- CSS -->
+  <link rel='stylesheet' href='https://necolas.github.io/normalize.css/3.0.3/normalize.css'>
+  <style>
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+    body {
+      background: #FF7100 url(images/pattern.png);
+      text-align: center;
+    }
+    img {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      max-height: 100%;
+      max-width: 100%;
+      position: absolute;
+
+    }
+  </style>
+  <script src='http://code.jquery.com/jquery-1.12.0.min.js'></script>
+  <script>
+  console.log('move');
+  function diff(x, y) {
+      var centerItem = $('body'),
+          centerLoc = centerItem.offset();
+      var dx = x - (centerLoc.left + (centerItem.width() / 2));
+          dy = y - (centerLoc.top + (centerItem.height() / 2));
+      return Math.atan2(dy, dx) * (180 / Math.PI);
+  }
+
+
+  $('body').mousemove(function(e){
+      var x = e.pageX;
+      var y = e.pageY;
+      console.log('move');
+      var myAngle = diff(x, y);
+      var rotationValue = 'rotate(' + myAngle + 'deg)';
+      $("#pointer").css({
+          '-moz-transform': rotationValue,
+          '-webkit-transform': rotationValue,
+          '-o-transform': rotationValue,
+          '-ms-transform': rotationValue,
+          'transform': rotationValue
+      });
+  });
+  </script>
+</head>
+
+<body>
+  <img src='images/monkey.png'/>
+  <img src='images/hongbao.png' id='pointer'/>
+</body>
+</html>
