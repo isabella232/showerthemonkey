@@ -39,7 +39,15 @@ $(function() {
   }
 
   window.setInterval(function(){
-    if (shooting) fire();
+    if (shooting) {
+      fire();
+      $('.monkey').css({
+        bottom: (Math.floor(Math.random() * 14) + 1),
+        left: (Math.floor(Math.random() * 14) + 1),
+        right: (Math.floor(Math.random() * 14) + 1),
+        top: (Math.floor(Math.random() * 14) + 1)
+      });
+    }
   }, 50);
 
   var shooting = false;
@@ -62,5 +70,11 @@ $(function() {
       $('#face').show();
       $('#scream').trigger('pause');
       $('#normal').trigger('play');
+      $('.monkey').css({
+        bottom: 0,
+        left: 0,
+        right: 0,
+        top: 0,
+      });
     });
 });

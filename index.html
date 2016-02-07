@@ -57,6 +57,13 @@
       background: url(images/pattern.png);
       opacity: 0.6;
     }
+    .monkey {
+      -webkit-transition: bottom 0.1s, left 0.1s, right 0.1s, top 0.1s;
+      -moz-transition: bottom 0.1s, left 0.1s, right 0.1s, top 0.1s;
+      -ms-transition: bottom 0.1s, left 0.1s, right 0.1s, top 0.1s;
+      -o-transition: bottom 0.1s, left 0.1s, right 0.1s, top 0.1s;
+      transition: bottom 0.1s, left 0.1s, right 0.1s, top 0.1s;
+    }
     #hongbao,
     img {
       left: 0;
@@ -89,9 +96,9 @@
 
 <body>
   <div id='pattern'></div>
-  <img src='images/monkey.png' id='head'/>
-  <img src='images/expression-default.png' id='face'/>
-  <img src='images/expression-frown.png' id='frown'/>
+  <img src='images/monkey.png' id='head' class='monkey'/>
+  <img src='images/expression-default.png' id='face' class='monkey'/>
+  <img src='images/expression-frown.png' id='frown' class='monkey'/>
   <div id='hongbao'>
     <img src='images/hongbao.png'/>
     <div id='bills'>
