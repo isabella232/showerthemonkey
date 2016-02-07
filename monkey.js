@@ -25,14 +25,18 @@ $(function() {
       });
   });
 
+  function fire() {
+    var bill = $('#bills img:not(.shoot):first');
+    // $('#bills').append(bill);
+    bill.addClass('shoot');
+    setTimeout(function(){
+      bill.removeClass('shoot');
+    }, 400);
+  }
+
   window.setInterval(function(){
-    if ($('#hongbao').hasClass('shoot') || !shooting) {
-      $('#hongbao').removeClass('shoot');
-    }
-    else {
-      $('#hongbao').addClass('shoot');
-    }
-  }, 400);
+    if (shooting) fire();
+  }, 50);
 
   var shooting = false;
 
@@ -41,10 +45,9 @@ $(function() {
   $('body')
     .mousedown(function () {
       shooting = true;
-      
       $('#face').hide();
       $('#frown').show();
-      $('#hongbao').addClass('shoot');
+      fire();
     })
     .mouseup(function () {
       shooting = false;
