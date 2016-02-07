@@ -44,14 +44,18 @@
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7100', endColorstr='#FFA607',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
       text-align: center;
     }
-    #pattern {
-      background: url(images/pattern.png);
+    #pattern,
+    #overlay {
+      background: transparent;
       bottom: 0;
       left: 0;
-      opacity: 0.6;
       position: absolute;
       right: 0;
       top: 0;
+    }
+    #pattern {
+      background: url(images/pattern.png);
+      opacity: 0.6;
     }
     img {
       left: 0;
@@ -75,5 +79,6 @@
   <img src='images/hongbao.png' id='pointer'/>
   <img src='images/expression-default.png' id='face'/>
   <img src='images/expression-frown.png' id='frown'/>
+  <div id='overlay'></div>
 </body>
 </html>
