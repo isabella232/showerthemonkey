@@ -68,15 +68,13 @@
       max-width: 100%;
       position: absolute;
     }
-    .bill {
-      -webkit-transition: left 0.7s;
-      -moz-transition: left 0.7s;
-      -ms-transition: left 0.7s;
-      -o-transition: left 0.7s;
-      transition: left 0.7s;
-    }
     .shoot .bill {
       left: 100%;
+      -webkit-transition: left 0.4s;
+      -moz-transition: left 0.4s;
+      -ms-transition: left 0.4s;
+      -o-transition: left 0.4s;
+      transition: left 0.4s;
     }
   </style>
   <script src='http://code.jquery.com/jquery-1.12.0.min.js'></script>
@@ -86,14 +84,13 @@
 <body>
   <div id='pattern'></div>
   <img src='images/monkey.png' id='head'/>
+  <img src='images/expression-default.png' id='face'/>
+  <img src='images/expression-frown.png' id='frown'/>
   <div id='hongbao'>
     <img src='images/hongbao.png'/>
     <img src='images/bill.png' class='bill'/>
     <img src='images/hongbao-top.png'/>
   </div>
-
-  <img src='images/expression-default.png' id='face'/>
-  <img src='images/expression-frown.png' id='frown'/>
   <div id='overlay'></div>
 </body>
 </html>
