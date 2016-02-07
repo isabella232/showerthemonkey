@@ -34,6 +34,7 @@
     html,
     body {
       height: 100%;
+      overflow: hidden;
       width: 100%;
     }
     body {
@@ -64,8 +65,16 @@
       -o-transition: bottom 0.1s, left 0.1s, right 0.1s, top 0.1s;
       transition: bottom 0.1s, left 0.1s, right 0.1s, top 0.1s;
     }
+    #app {
+      left: 0;
+      margin: 20px;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      position: absolute;
+    }
     #hongbao,
-    img {
+    #app img {
       left: 0;
       right: 0;
       bottom: 0;
@@ -75,7 +84,7 @@
       max-width: 100%;
       position: absolute;
     }
-    .shoot {
+    #app .shoot {
       left: 100%;
       -webkit-transition: left 0.4s, top 0.4s;
       -moz-transition: left 0.4s, top 0.4s;
@@ -83,12 +92,24 @@
       -o-transition: left 0.4s, top 0.4s;
       transition: left 0.4s, top 0.4s;
     }
-    .hit.shoot-1 { top: 40%; }
-    .hit.shoot-2 { top: 80%; }
-    .hit.shoot-3 { top: 120%; }
-    .hit.shoot-4 { top: -40%; }
-    .hit.shoot-5 { top: -80%; }
-    .hit.shoot-6 { top: -120%; }
+    #app .hit.shoot-1 { top: 40%; }
+    #app .hit.shoot-2 { top: 80%; }
+    #app .hit.shoot-3 { top: 120%; }
+    #app .hit.shoot-4 { top: -40%; }
+    #app .hit.shoot-5 { top: -80%; }
+    #app .hit.shoot-6 { top: -120%; }
+    #footer {
+      background: #FFF;
+      bottom: 0;
+      box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+      left: 0;
+      padding: 20px;
+      position: absolute;
+      right: 0;
+    }
+    #footer img {
+      display: block;
+    }
   </style>
   <script src='http://code.jquery.com/jquery-1.12.0.min.js'></script>
   <script src='monkey.js'></script>
@@ -96,25 +117,30 @@
 
 <body>
   <div id='pattern'></div>
-  <img src='images/monkey.png' id='head' class='monkey'/>
-  <img src='images/expression-default.png' id='face' class='monkey'/>
-  <img src='images/expression-frown.png' id='frown' class='monkey'/>
-  <div id='hongbao'>
-    <img src='images/hongbao.png'/>
-    <div id='bills'>
-      <img src='images/bill.png'/>
-      <img src='images/bill.png'/>
-      <img src='images/bill.png'/>
-      <img src='images/bill.png'/>
-      <img src='images/bill.png'/>
-      <img src='images/bill.png'/>
-      <img src='images/bill.png'/>
-      <img src='images/bill.png'/>
+  <div id='app'>
+    <img src='images/monkey.png' id='head' class='monkey'/>
+    <img src='images/expression-default.png' id='face' class='monkey'/>
+    <img src='images/expression-frown.png' id='frown' class='monkey'/>
+    <div id='hongbao'>
+      <img src='images/hongbao.png'/>
+      <div id='bills'>
+        <img src='images/bill.png'/>
+        <img src='images/bill.png'/>
+        <img src='images/bill.png'/>
+        <img src='images/bill.png'/>
+        <img src='images/bill.png'/>
+        <img src='images/bill.png'/>
+        <img src='images/bill.png'/>
+        <img src='images/bill.png'/>
+      </div>
+      <img src='images/hongbao-top.png'/>
     </div>
-    <img src='images/hongbao-top.png'/>
   </div>
   <audio id='scream' src='scream.mp3' loop preload='auto'></audio>
   <audio id='normal' src='background.mp3' preload='auto'></audio>
   <div id='overlay'></div>
+  <footer id='footer'>
+    <a href='https://wiredcraft.com'><img src='images/logo.png' alt='Wiredcraft'/></a>
+  </footer>
 </body>
 </html>
