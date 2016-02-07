@@ -31,6 +31,9 @@ $(function() {
     bill.addClass('shoot');
     bill.addClass('shoot-'+ (Math.floor(Math.random() * 7) + 1));
     setTimeout(function(){
+      bill.addClass('hit');
+    }, 50);
+    setTimeout(function(){
       bill.attr('class', '');
     }, 400);
   }
