@@ -41,6 +41,7 @@ $(function() {
   $('body')
     .mousedown(function () {
       shooting = true;
+      
       $('#face').hide();
       $('#frown').show();
       $('#hongbao').addClass('shoot');
