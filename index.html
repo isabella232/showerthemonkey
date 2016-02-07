@@ -37,8 +37,21 @@
       width: 100%;
     }
     body {
-      background: #FF7100 url(images/pattern.png);
+      background: #ff7100; /* Old browsers */
+      background: -moz-radial-gradient(center, ellipse cover,  #ff7100 0%, #FFA607 100%); /* FF3.6-15 */
+      background: -webkit-radial-gradient(center, ellipse cover,  #ff7100 0%,#FFA607 100%); /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(ellipse at center,  #ff7100 0%,#FFA607 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7100', endColorstr='#FFA607',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
       text-align: center;
+    }
+    #pattern {
+      background: url(images/pattern.png);
+      bottom: 0;
+      left: 0;
+      opacity: 0.6;
+      position: absolute;
+      right: 0;
+      top: 0;
     }
     img {
       left: 0;
@@ -57,6 +70,7 @@
 </head>
 
 <body>
+  <div id='pattern'></div>
   <img src='images/monkey.png'/>
   <img src='images/hongbao.png' id='pointer'/>
   <img src='images/expression-default.png' id='face'/>
