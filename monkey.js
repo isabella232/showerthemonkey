@@ -29,8 +29,9 @@ $(function() {
     var bill = $('#bills img:not(.shoot):first');
     // $('#bills').append(bill);
     bill.addClass('shoot');
+    bill.addClass('shoot-'+ (Math.floor(Math.random() * 7) + 1));
     setTimeout(function(){
-      bill.removeClass('shoot');
+      bill.attr('class', '');
     }, 400);
   }
 
