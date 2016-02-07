@@ -40,6 +40,7 @@ $(function() {
   }, 50);
 
   var shooting = false;
+  $('#normal').trigger('play');
 
   // Changing the monkey's expression on click
   $('#frown').hide();
@@ -50,11 +51,13 @@ $(function() {
       $('#frown').show();
       fire();
       $('#scream').trigger('play');
+      $('#normal').trigger('pause');
     })
     .mouseup(function () {
       shooting = false;
       $('#frown').hide();
       $('#face').show();
       $('#scream').trigger('pause');
+      $('#normal').trigger('play');
     });
 });
