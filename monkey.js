@@ -49,10 +49,12 @@ $(function() {
       $('#face').hide();
       $('#frown').show();
       fire();
+      $('#scream').trigger('play');
     })
     .mouseup(function () {
       shooting = false;
       $('#frown').hide();
       $('#face').show();
+      $('#scream').trigger('pause');
     });
 });
