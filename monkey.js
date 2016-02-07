@@ -16,7 +16,7 @@ $(function() {
 
     var myAngle = diff(x, y) + 180;
     var rotationValue = 'rotate(' + myAngle + 'deg)';
-    $("#pointer").css({
+    $('#hongbao').css({
         '-moz-transform': rotationValue,
         '-webkit-transform': rotationValue,
         '-o-transform': rotationValue,
@@ -31,6 +31,7 @@ $(function() {
     .mousedown(function () {
       $('#face').hide();
       $('#frown').show();
+      $('#hongbao').addClass('shoot');
     })
     .mouseup(function () {
       $('#frown').hide();
