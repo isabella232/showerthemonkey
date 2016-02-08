@@ -9,10 +9,9 @@ $(function() {
       return Math.atan2(dy, dx) * (180 / Math.PI);
   }
 
-  $('body').mousemove(function(e){
+  $('#overlay').mousemove(function(e){
       var x = e.pageX;
       var y = e.pageY;
-      console.log('move');
 
       var myAngle = diff(x, y) + 180;
       var rotationValue = 'rotate(' + myAngle + 'deg)';
@@ -55,7 +54,7 @@ $(function() {
 
   // Changing the monkey's expression on click
   $('#frown').hide();
-  $('body')
+  $('#overlay')
     .mousedown(function () {
       shooting = true;
       $('#face').hide();

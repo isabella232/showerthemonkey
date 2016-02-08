@@ -103,16 +103,35 @@
       bottom: 0;
       box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
       left: 0;
-      padding: 20px;
       position: absolute;
       right: 0;
     }
-    #footer img {
+    #footer .logo {
+      display: block;
+      float: left;
+      padding: 20px;
+    }
+    #footer .logo img {
       display: block;
       height: 20px;
     }
     #footer .social a {
       float: right;
+      opacity: 0.2;
+      padding: 15px 10px;
+      text-align: center;
+      -webkit-transition: opacity 0.2s;
+      -moz-transition: opacity 0.2s;
+      -ms-transition: opacity 0.2s;
+      -o-transition: opacity 0.2s;
+      transition: opacity 0.2s;
+    }
+    #footer .social a:hover {
+      opacity: 0.8;
+    }
+    #footer .social a img {
+      display: block;
+      height: 30px;
     }
   </style>
   <script src='http://code.jquery.com/jquery-1.12.0.min.js'></script>
@@ -145,14 +164,14 @@
   <div id='overlay'></div>
   <footer id='footer'>
     <div class='social'>
-      <a class='email' href='mailto:?body=http://wiredcraft.com/showerthemonkey'><span>Share by email</span></a>
-      <a class='facebook' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http://wiredcraft.com/showerthemonkey/'><span>Share on facebook</span></a>
-      <a class='twitter' target='_blank' href='https://twitter.com/intent/tweet?text=.@wiredcraft%20&amp;related=wiredcraft&amp;url=https://wiredcraft.com/blog/hey-jonathan/'><span>Share on Twitter</span></a>
-      <a class='google' target='_blank' href="https://plus.google.com/share?url=https://wiredcraft.com/blog/hey-jonathan/"><span>Share on Google+</span></a>
-      <a class='linkedin' target='_blank' href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://wiredcraft.com/blog/hey-jonathan/&amp;title=Hey Jonathan&amp;source=wiredcraft"><span>Share on LinkedIn</span></a>
-      <a class='weibo' target='_blank' href='http://service.weibo.com/share/share.php?url=https://wiredcraft.com/blog/hey-jonathan/&amp;title=Hey Jonathan&amp;dpc=1'><span>Share on Weibo</span></a>
+      <a class='email' href='mailto:?body=http://wiredcraft.com/showerthemonkey'><img src='images/email.svg' alt='Share by email' title='Share by email'/></a>
+      <a class='facebook' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http://wiredcraft.com/showerthemonkey/'><img src='images/facebook.svg' alt='Share on facebook' title='Share on facebook'/></a>
+      <a class='twitter' target='_blank' href='https://twitter.com/intent/tweet?text=.@wiredcraft%20&amp;related=wiredcraft&amp;url=http://wiredcraft.com/showerthemonkey/'><img src='images/twitter.svg' alt='Share on Twitter' title='Share on Twitter'/></a>
+      <a class='google' target='_blank' href='https://plus.google.com/share?url=http://wiredcraft.com/showerthemonkey/'><img src='images/google.svg' alt='Share on Google+' title='Share on Google+'/></a>
+      <a class='linkedin' target='_blank' href='https://www.linkedin.com/shareArticle?mini=true&amp;url=http://wiredcraft.com/showerthemonkey/&amp;title=Shower the Monkey&amp;source=wiredcraft'><img src='images/linkedin.svg' alt='Share on LinkedIn' title='Share on LinkedIn'/></a>
+      <a class='weibo' target='_blank' href='http://service.weibo.com/share/share.php?url=http://wiredcraft.com/showerthemonkey/&amp;title=Shower the Monkey&amp;dpc=1'><img src='images/weibo.svg' alt='Share on Weibo' title='Share on Weibo'/></a>
     </div>
-    <a href='https://wiredcraft.com'><img src='images/logo.png' alt='Wiredcraft'/></a>
+    <a href='https://wiredcraft.com' class='logo'><img src='images/logo.png' alt='Wiredcraft'/></a>
   </footer>
 </body>
 </html>
