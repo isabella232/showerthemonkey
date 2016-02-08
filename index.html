@@ -6,24 +6,24 @@
   <meta charset='utf-8'/>
   <meta http-equiv='Content-Language' content='en'/>
   <meta name='viewport' content='width=device-width, initial-scale=1'/>
-  <!-- <meta name='keywords' content='{{ site.keywords | join: ', ' }}{% if page.tags %}, {{ page.tags | join: ', ' }}{% endif %}'/>
-  <meta name='description' content='{% if page.excerpt %}{{ page.excerpt | strip_html | escape }}{% else %}{{ site.description }}{% endif %}'> -->
+  <meta name='keywords' content='Monkey, CNY, Chinese New Year, Hongbao, New Year'/>
+  <meta name='description' content='For the Chinese New Year, Hongbao the Heck Out of the Monkey'>
 
   <!-- Open graph -->
-  <!-- <meta property='og:site_name' content='Wiredcraft'/>
+  <meta property='og:site_name' content='Wiredcraft'/>
   <meta property='og:type' content='website'/>
-  <meta property='og:title' content='{{ title }}'/>
-  <meta property='og:url' content='{{ site.url }}{{ page.url }}'/>
-  <meta property='og:description' content='{{ description }}'/>
-  <meta property='og:image' content='{{ image }}'/> -->
+  <meta property='og:title' content='Shower the Monkey'/>
+  <meta property='og:url' content='http://wiredcraft.com/showerthemonkey/'/>
+  <meta property='og:description' content='For the Chinese New Year, Hongbao the Heck Out of the Monkey'/>
+  <meta property='og:image' content='http://wiredcraft.com/showerthemonkey/images/preview.gif'/>
 
   <!-- Twitter card -->
-  <!-- <meta name='twitter:card' content='summary_large_image'/>
+  <meta name='twitter:card' content='summary_large_image'/>
   <meta name='twitter:site' content='@wiredcraft'/>
-  <meta name='twitter:creator' content='{{ creator }}'/>
-  <meta name='twitter:title' content='{{ title }}'/>
-  <meta name='twitter:description' content='{{ description }}'/>
-  <meta name='twitter:image' content='{{ image }}'/> -->
+  <meta name='twitter:creator' content='@wiredcraft'/>
+  <meta name='twitter:title' content='Shower the Monkey'/>
+  <meta name='twitter:description' content='For the Chinese New Year, Hongbao the Heck Out of the Monkey'/>
+  <meta name='twitter:image' content='http://wiredcraft.com/showerthemonkey/images/preview.gif'/>
 
   <!-- Favicons -->
   <!-- {% include favicons.html %} -->
@@ -92,12 +92,12 @@
       -o-transition: left 0.4s, top 0.4s;
       transition: left 0.4s, top 0.4s;
     }
-    #app .hit.shoot-1 { top: 40%; }
-    #app .hit.shoot-2 { top: 80%; }
-    #app .hit.shoot-3 { top: 120%; }
-    #app .hit.shoot-4 { top: -40%; }
-    #app .hit.shoot-5 { top: -80%; }
-    #app .hit.shoot-6 { top: -120%; }
+    #app .hit.shoot-1 { top: 30%; }
+    #app .hit.shoot-2 { top: 60%; }
+    #app .hit.shoot-3 { top: 90%; }
+    #app .hit.shoot-4 { top: -30%; }
+    #app .hit.shoot-5 { top: -60%; }
+    #app .hit.shoot-6 { top: -90%; }
     #footer {
       background: #FFF;
       bottom: 0;
@@ -110,6 +110,9 @@
     #footer img {
       display: block;
       height: 20px;
+    }
+    #footer .social a {
+      float: right;
     }
   </style>
   <script src='http://code.jquery.com/jquery-1.12.0.min.js'></script>
@@ -141,6 +144,14 @@
   <audio id='normal' src='background.mp3' preload='auto'></audio>
   <div id='overlay'></div>
   <footer id='footer'>
+    <div class='social'>
+      <a class='email' href='mailto:?body=http://wiredcraft.com/showerthemonkey'><span>Share by email</span></a>
+      <a class='facebook' target='_blank' href='https://www.facebook.com/sharer/sharer.php?u=http://wiredcraft.com/showerthemonkey/'><span>Share on facebook</span></a>
+      <a class='twitter' target='_blank' href='https://twitter.com/intent/tweet?text=.@wiredcraft%20&amp;related=wiredcraft&amp;url=https://wiredcraft.com/blog/hey-jonathan/'><span>Share on Twitter</span></a>
+      <a class='google' target='_blank' href="https://plus.google.com/share?url=https://wiredcraft.com/blog/hey-jonathan/"><span>Share on Google+</span></a>
+      <a class='linkedin' target='_blank' href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://wiredcraft.com/blog/hey-jonathan/&amp;title=Hey Jonathan&amp;source=wiredcraft"><span>Share on LinkedIn</span></a>
+      <a class='weibo' target='_blank' href='http://service.weibo.com/share/share.php?url=https://wiredcraft.com/blog/hey-jonathan/&amp;title=Hey Jonathan&amp;dpc=1'><span>Share on Weibo</span></a>
+    </div>
     <a href='https://wiredcraft.com'><img src='images/logo.png' alt='Wiredcraft'/></a>
   </footer>
 </body>
